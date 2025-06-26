@@ -61,6 +61,8 @@ python app.py
 
 Buka browser di http://127.0.0.1:5000/
 
+```
+
 ############################################################
 
 🔗 Teknologi yang Digunakan
@@ -94,6 +96,7 @@ Nama:
 5.Virgina Staraina
 
 NIM:
+
 1. A11.2023.14921
 2. A11.2023.14922
 3. A11.2023.15373
@@ -103,4 +106,3 @@ NIM:
 Prodi: S1 - Teknik Informatika - Pembelajaran Mesin - A11.4407
 
 ---
-```
