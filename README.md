@@ -63,7 +63,7 @@ Buka browser di http://127.0.0.1:5000/
 
 ```
 
-############################################################
+---
 
 🔗 Teknologi yang Digunakan
 Python
@@ -76,16 +76,14 @@ Flask
 
 HTML + Bootstrap (untuk antarmuka)
 
-##############################################################################
+---
 
 📌 Catatan
 File model_gaya_belajar.h5 telah disimpan dan digunakan saat prediksi
 
 Untuk menjalankan kembali pelatihan, jalankan script Python training model (model_nn2.py jika tersedia)
 
-##############################################################################
-
-)
+---
 
 🧑‍💻 Kontributor
 Nama:
@@ -104,5 +102,3 @@ NIM:
 5. A11.2023.15381
 
 Prodi: S1 - Teknik Informatika - Pembelajaran Mesin - A11.4407
-
----
