@@ -86,12 +86,14 @@ Untuk menjalankan kembali pelatihan, jalankan script Python training model (mode
 ---
 
 🧑‍💻 Kontributor
+
 Nama:
-1.Muhammad Rifki Hendarto
-2.Richard Christoper Subianto
-3.Firnanda Rahmawati
-4.Najwa Kaila Nuraisyah
-5.Virgina Staraina
+
+1. Muhammad Rifki Hendarto
+2. Richard Christoper Subianto
+3. Firnanda Rahmawati
+4. Najwa Kaila Nuraisyah
+5. Virgina Staraina
 
 NIM:
 
