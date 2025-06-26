@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil Prediksi Gaya Belajar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .scroll-box {
+            max-height: 500px;
+            overflow-y: auto;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+
+<body class="bg-light d-flex align-items-center" style="min-height: 100vh;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-lg mb-4">
+                    <div class="card-header bg-success text-white text-center">
+                        <h4 class="mb-0">Hasil Prediksi Gaya Belajar</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="mb-3">Gaya Belajar <strong id="output-nama"></strong> adalah:</h5>
+                        <h1 class="display-5 text-primary fw-bold">{{ result }}</h1>
+
+                        <!-- Artikel scrollable box -->
+                        <div class="scroll-box text-start mt-4 mb-4">
+                            Setiap orang memiliki cara unik dalam menyerap, memahami, dan mengingat informasi. Dalam
+                            dunia pendidikan, terdapat tiga gaya belajar utama yang paling dikenal: Visual, Auditory,
+                            dan Kinesthetic (sering disingkat VAK). Memahami gaya belajar seseorang dapat membantu
+                            meningkatkan efektivitas belajar dan membuat proses pembelajaran menjadi lebih menyenangkan
+                            serta bermakna.<br><br>
+                            Berikut penjelasan mengenai prediksi gaya belajar anda :
+                            <hr>
+                            {% if result == "Visual" %}
+                            <h5><strong>Gaya Belajar Visual – Belajar dengan Melihat</strong></h5>
+                            <p><strong>Penjelasan:</strong> Orang dengan gaya belajar visual cenderung menyerap
+                                informasi paling baik melalui media yang melibatkan indera penglihatan. Mereka lebih
+                                memahami materi yang disampaikan dalam bentuk grafik, warna, diagram, peta konsep, atau
+                                video. Visual learner sangat memperhatikan detail visual, termasuk ekspresi wajah,
+                                gerakan, dan bahasa tubuh.</p>
+                            <p><strong>Kelebihan:</strong>
+                            <ul>
+                                <li>Mudah mengingat informasi yang disajikan dalam bentuk gambar atau skema.</li>
+                                <li>Cepat memahami konsep yang kompleks jika divisualisasikan.</li>
+                                <li>Terorganisir dan cenderung membuat catatan yang rapi dan sistematis.</li>
+                            </ul>
+                            </p>
+                            <p><strong>Strategi:</strong>
+                            <ul>
+                                <li>Gunakan mind mapping atau peta konsep untuk merangkum materi.</li>
+                                <li>Warnai catatan dengan spidol atau stabilo untuk membedakan ide utama.</li>
+                                <li>Tonton video edukatif atau presentasi visual.</li>
+                                <li>Buat diagram, grafik, dan tabel sendiri dari informasi yang dipelajari.</li>
+                            </ul>
+                            </p>
+                            <p><strong>Contoh:</strong> Saat belajar tentang sistem peredaran darah, pelajar visual akan
+                                sangat terbantu dengan melihat diagram jantung dan alur darah daripada hanya membaca
+                                deskripsi teks.</p>
+                            {% elif result == "Auditory" %}
+                            <h5><strong>Gaya Belajar Auditory – Belajar dengan Mendengar</strong></h5>
+                            <p><strong>Penjelasan:</strong> Auditory learner lebih mudah memahami informasi melalui
+                                suara. Mereka menyerap pelajaran dengan baik melalui penjelasan verbal, diskusi,
+                                ceramah, dan audio. Pelajar tipe ini cenderung lebih suka mendengarkan dibanding membaca
+                                atau menulis panjang.</p>
+                            <p><strong>Kelebihan:</strong>
+                            <ul>
+                                <li>Mudah mengingat informasi yang disampaikan secara lisan.</li>
+                                <li>Berpikir secara verbal dan senang berdiskusi.</li>
+                                <li>Cenderung memiliki kemampuan berbicara dan menyampaikan ide yang baik.</li>
+                            </ul>
+                            </p>
+                            <p><strong>Strategi:</strong>
+                            <ul>
+                                <li>Dengarkan audio book, podcast, atau rekaman materi kuliah.</li>
+                                <li>Ulangi materi dengan membaca keras-keras atau menjelaskan kepada orang lain.</li>
+                                <li>Ikut serta dalam diskusi kelompok atau tanya jawab.</li>
+                                <li>Gunakan mnemonik suara atau lagu untuk menghafal konsep tertentu.</li>
+                            </ul>
+                            </p>
+                            <p><strong>Contoh:</strong> Untuk menghafal definisi atau istilah, pelajar auditory dapat
+                                membuat rekaman suaranya sendiri membacakan materi dan memutarnya kembali saat belajar.
+                            </p>
+                            {% elif result == "Kinesthetic" %}
+                            <h5><strong>Gaya Belajar Kinesthetic – Belajar dengan Praktik</strong></h5>
+                            <p><strong>Penjelasan:</strong> Pelajar kinestetik menyukai aktivitas fisik dan belajar
+                                paling efektif melalui pengalaman langsung. Mereka memahami informasi melalui sentuhan,
+                                gerakan, eksperimen, dan simulasi nyata. Mereka tidak nyaman duduk diam terlalu lama dan
+                                cenderung "belajar sambil melakukan".</p>
+                            <p><strong>Kelebihan:</strong>
+                            <ul>
+                                <li>Memiliki daya ingat tinggi terhadap pengalaman fisik dan praktik nyata.</li>
+                                <li>Tangguh dalam pembelajaran berbasis proyek dan eksperimen.</li>
+                                <li>Cenderung kreatif dan menikmati aktivitas yang melibatkan manipulasi objek.</li>
+                            </ul>
+                            </p>
+                            <p><strong>Strategi:</strong>
+                            <ul>
+                                <li>Lakukan eksperimen, praktik langsung, atau simulasi untuk memahami materi.</li>
+                                <li>Gunakan alat bantu nyata seperti alat peraga atau model fisik.</li>
+                                <li>Belajar sambil berjalan, bergerak, atau menulis di papan tulis.</li>
+                                <li>Gunakan metode role-play atau permainan edukatif.</li>
+                            </ul>
+                            </p>
+                            <p><strong>Contoh:</strong> Saat belajar tentang hukum Newton, pelajar kinestetik akan lebih
+                                cepat mengerti jika mereka melakukan percobaan langsung dengan bola, papan luncur, atau
+                                benda yang bisa bergerak.
+                            </p>
+                            {% endif %}
+
+                            <hr class="my-4">
+
+                            <h6 class="text-muted">Sumber :</h6>
+
+                            {% if result == "Visual" %}
+                            <ol type="1">
+                                <li><a href="https://campus.quipper.com/kampuspedia/gaya-belajar-visual">Kampuspedia</a></li>
+                                <li><a href="https://www.halodoc.com/artikel/mengenal-apa-itu-gaya-belajar-visual-ciri-dan-contohnya?srsltid=AfmBOopiYPmrJvznQ01A8ZzRlcWT0k-7VRPeUzlkHokOq2lkXz4h2P-9">halodoc</a></li>
+                                <li><a href="https://www.gramedia.com/best-seller/gaya-belajar-visual/?srsltid=AfmBOop7873jiZTjVtOoSME_DVycizSXPRsVgQX9IwRZiT-z-SIxMe7z">Gramedia</a></li>
+                                <li><a href="https://nsd.co.id/posts/pengertian-gaya-belajar-visual.html">NS Development</a></li>
+                            </ol>
+                            {% endif %}
+
+                            {% if result == "Auditory" %}
+                            <ol type="1">
+                                <li><a href="https://www.detik.com/bali/berita/d-6465805/gaya-belajar-auditori-manfaat-ciri-dan-contohnya">detik.com</a></li>
+                                <li><a href="https://campus.quipper.com/kampuspedia/gaya-belajar-auditori">quipper</a></li>
+                                <li><a href="https://kumparan.com/pengertian-dan-istilah/pengertian-gaya-belajar-auditori-dan-karakteristiknya-21BjBSgpL5E">Kumparan</a></li>
+                                <li><a href="https://nsd.co.id/posts/pengertian-gaya-belajar-auditori.html">NS Development</a></li>
+                            </ol>
+                            {% endif %}
+
+                            {% if result == "Kinesthetic" %}
+                            <ol type="1">
+                                <li><a href="https://www.detik.com/edu/detikpedia/d-6890601/gaya-belajar-kinestetik-pengertian-dan-ciri-cirinya">detik.com</a></li>
+                                <li><a href="https://campus.quipper.com/kampuspedia/gaya-belajar-kinestetik">quipper</a></li>
+                                <li><a href="https://nsd.co.id/posts/pengertian-gaya-belajar-kinestetik.html">NS Development</a></li>
+                                <li><a href="https://umsu.ac.id/berita/apa-itu-gaya-belajar-kinestetik-ciri-ciri-dan-contohnya/">UMSU (Universitas Muhammadiyah Sumatera Utara)</a></li>
+                            </ol>
+                            {% endif %}
+                        </div>
+
+                        <!-- Tombol kembali -->
+                        <a href="/" class="btn btn-outline-secondary">Kembali ke Kuisioner</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nama = localStorage.getItem("namaUser");
+            if (nama) {
+                document.getElementById("output-nama").textContent = nama;
+            }
+        });
+    </script>
+</body>
+
+</html>
